@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GUI-refresh-by-time.iml" filepath="$PROJECT_DIR$/GUI-refresh-by-time.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Typer.iml" filepath="$PROJECT_DIR$/Typer.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/typerlib/typerlib.iml" filepath="$PROJECT_DIR$/typerlib/typerlib.iml" />
     </modules>

@@ -12,7 +12,6 @@ import io.github.typer.Typer;
 
 public class MainActivity extends Activity {
 
-
     TextView txt;
     TextView txt2;
     TextView txt3;
@@ -26,9 +25,9 @@ public class MainActivity extends Activity {
         txt2 = (TextView) findViewById(R.id.textView1);
         txt3 = (TextView) findViewById(R.id.textView2);
 
-        txt.setTypeface(Typer.f().getFont(this, Font.ROBOTO_THIN));
-        txt2.setTypeface(Typer.f().getFont(this,Font.ROBOTO_BLACK));
-        txt3.setTypeface(Typer.f().getFont(this,Font.ROBOTO_CONDENSED_ITALIC));
+        txt.setTypeface(Typer.set(this).getFont(Font.ROBOTO_THIN));
+        txt2.setTypeface(Typer.set(this).getFont(Font.ROBOTO_BLACK));
+        txt3.setTypeface(Typer.set(this).getFont(Font.ROBOTO_CONDENSED_ITALIC));
     }
 
 

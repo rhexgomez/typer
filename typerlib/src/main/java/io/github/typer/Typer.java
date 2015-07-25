@@ -23,20 +23,40 @@ import java.util.HashMap;
 
 public class Typer {
 
-    private HashMap<String, Typeface> fonts = null;
     private static Typer typer = null;
 
-    private Typer() {
-        fonts = new HashMap<>();
+    private HashMap<String, Typeface> fonts = null;
+    private Context context = null;
+
+    /**
+     * Initialize font storage and connect the context.
+     *
+     * @param context the context of the activity.
+     */
+    private Typer(Context context) {
+        this.fonts = new HashMap<>();
+        this.context = context;
     }
 
-    public static Typer f() {
+    /**
+     * Get the singleton base method.
+     *
+     * @param context the context of the activity.
+     * @return the Typer class for the singleton.
+     */
+    public static Typer set(Context context) {
         if (typer == null)
-            typer = new Typer();
+            typer = new Typer(context);
         return typer;
     }
 
-    public Typeface getFont(Context context, String font) {
+    /**
+     * Get the proper Typeface depending on the parameter
+     *
+     * @param font the font name
+     * @return the Typeface that corresponds to the name
+     */
+    public Typeface getFont(String font) {
         Typeface myFont = fonts.get(font);
         if (myFont == null) {
             myFont = Typeface.createFromAsset(context.getAssets(), "fonts/" + font);
