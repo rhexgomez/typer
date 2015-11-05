@@ -1,4 +1,4 @@
-package io.github.typer;
+package com.elmargomez.typer;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

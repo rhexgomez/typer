@@ -1,4 +1,4 @@
-package io.github.ecobin.myapplication;
+package com.elmargomez.ecobin.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import io.github.typer.Font;
-import io.github.typer.Typer;
+import com.elmargomez.typer.Font;
+import com.elmargomez.typer.Typer;
 
 
 public class MainActivity extends Activity {

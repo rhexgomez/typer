@@ -1,4 +1,4 @@
-package io.github.typer;
+package com.elmargomez.typer;
 
 import android.app.Activity;
 import android.os.Bundle;

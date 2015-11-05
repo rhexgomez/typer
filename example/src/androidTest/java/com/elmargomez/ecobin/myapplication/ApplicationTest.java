@@ -1,4 +1,4 @@
-package io.github.ecobin.myapplication;
+package com.elmargomez.ecobin.myapplication;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
