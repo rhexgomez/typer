@@ -1,4 +1,4 @@
-package com.elmargomez.ecobin.myapplication;
+package com.elmargomez.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
