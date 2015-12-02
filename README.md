@@ -10,7 +10,7 @@ This library wraps the complexity of adding a font resource in your project and 
 
 ## Usage
 
-Add the this dependency to your Gradle file
+Add this dependency to your Gradle file
 
 ```gradle
 dependencies {
