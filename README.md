@@ -6,7 +6,7 @@
 
 Super easy to use font library in Android. It offers the most popular fonts used by developers today, and it solves the leak issues that is commonly done by developers.
 
-This library wraps the complexity of adding a font resource in your project and recycle those recently created font inorder to maximize your app's perfromance.
+This library wraps the complexity of adding a font resource in your project and recycle those recently created font inorder to maximize your app's performance.
 
 ## Usage
 
