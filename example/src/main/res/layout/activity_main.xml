@@ -14,38 +14,159 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ExampleActivity"
+    android:background="#AAA"
     android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Typer Sample"
-        android:id="@+id/textView"
-        android:textSize="100sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Typer Sample"
-        android:id="@+id/textView1"
-        android:textSize="40sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Typer Sample"
-        android:id="@+id/textView2"
-        android:textSize="40sp" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/base_padding"
+                    android:paddingBottom="@dimen/base_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/base_padding"
+                        android:text="AppCompatTextViews"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/regular_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/italic_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto italic"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bold_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/thin_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Thin"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto (Theme default)"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/base_padding"
+                    android:paddingBottom="@dimen/base_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/base_padding"
+                        android:text="AppcompatEditTexts"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/regular_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/italic_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto italic"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/bold_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/thin_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Thin"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto (Theme default)"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

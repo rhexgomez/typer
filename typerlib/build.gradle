@@ -1,16 +1,17 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
 version = "1.0.0"
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 5
-        targetSdkVersion 21
+        minSdkVersion 16
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
     }
@@ -24,7 +25,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 def siteUrl = 'https://github.com/elmargomezio/typer'
@@ -39,8 +42,8 @@ install {
                 packaging 'aar'
 
                 // Add your description here
-                name 'Typer a Roboto font Gradle base dependency'
-                description = 'Super easy to use font library in Android. It offers the most popular fonts used by developers today, and it solves the leak issues that is commonly done by developers.'
+                name 'Typer a Roboto fonts Gradle base dependency'
+                description = 'Super easy to use fonts library in Android. It offers the most popular fonts used by developers today, and it solves the leak issues that is commonly done by developers.'
                 url siteUrl
 
                 // Set your license
@@ -113,4 +116,7 @@ bintray {
             }
         }
     }
+}
+repositories {
+    mavenCentral()
 }

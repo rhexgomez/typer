@@ -13,10 +13,16 @@
   limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="io.github.typer">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.elmargomez.typer">
 
-    <application android:allowBackup="true" android:label="@string/app_name">
-
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name">
+        <provider
+            android:name="com.elmargomez.typer.TyperProvider"
+            android:authorities="${applicationId}.com.elmargomez.typer"
+            android:exported="false" />
     </application>
 
 </manifest>
