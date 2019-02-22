@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_roboto_example/java_roboto_example.iml" filepath="$PROJECT_DIR$/java_roboto_example/java_roboto_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin_roboto_example/kotlin_roboto_example.iml" filepath="$PROJECT_DIR$/kotlin_roboto_example/kotlin_roboto_example.iml" />
       <module fileurl="file://$PROJECT_DIR$/typer.iml" filepath="$PROJECT_DIR$/typer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/typerlib/typerlib.iml" filepath="$PROJECT_DIR$/typerlib/typerlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/typer_roboto/typer_roboto.iml" filepath="$PROJECT_DIR$/typer_roboto/typer_roboto.iml" />
     </modules>
   </component>
 </project>

@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/example" />
-            <option value="$PROJECT_DIR$/typerlib" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/java_roboto_example" />
+            <option value="$PROJECT_DIR$/kotlin_roboto_example" />
+            <option value="$PROJECT_DIR$/typer_roboto" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

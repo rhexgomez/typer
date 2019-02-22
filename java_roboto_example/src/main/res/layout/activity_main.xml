@@ -1,0 +1,172 @@
+<!--
+  Copyright 2015 Elmar Rhex Gomez
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAA"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/base_padding"
+                    android:paddingBottom="@dimen/base_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/base_padding"
+                        android:text="AppCompatTextViews"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/regular_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/italic_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto italic"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/bold_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/thin_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto Thin"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/base_padding"
+                        android:text="Roboto (Theme default)"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/base_padding"
+                    android:paddingBottom="@dimen/base_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/base_padding"
+                        android:text="AppCompatEditTexts"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/regular_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/italic_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto italic"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/bold_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/thin_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto Thin"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/base_margin"
+                        android:text="Roboto (Theme default)"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/textview_font" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
