@@ -1,1 +1,2 @@
-include ':common', ':typer_roboto', ':java_roboto_example', ':kotlin_roboto_example'
+include ':common', ':typer-roboto', ':java_roboto_example', ':kotlin_roboto_example'
+project(':typer-roboto').projectDir = new File(rootDir,'typer_roboto')

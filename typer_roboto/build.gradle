@@ -2,10 +2,15 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: "com.jfrog.bintray"
+apply plugin: 'com.jfrog.bintray'
 apply plugin: 'org.jetbrains.dokka-android'
 
-version = "2.0.0"
+ext {
+    groupId = 'com.rhexgomez.typer'
+    libVersion = '2.0.0'
+    siteUrl = 'https://github.com/rhexgomez/typer'
+    gitUrl = 'https://github.com/rhexgomez/typer.git'
+}
 
 android {
     compileSdkVersion 28
@@ -23,24 +28,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    // Since our library is using Kotlin we need to use Dokka to generate Javadoc
-    dokka {
-        outputFormat = 'html'
-        outputDirectory = "$buildDir/javadoc"
-    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':common')
+    api project(':common')
 }
 
-def siteUrl = 'https://github.com/rhexgomez/typer'
-def gitUrl = 'https://github.com/rhexgomez/typer.git'
-group = "com.elmargomez.typer"
+version = libVersion
+group = groupId                           // The groupId in `implementation`
 
 install {
     repositories.mavenInstaller {
@@ -48,10 +46,9 @@ install {
         pom {
             project {
                 packaging 'aar'
-
-                // Add your description here
-                name 'Typer a Roboto fonts Gradle base dependency'
-                description = 'Super easy to use fonts library in Android. It offers the most popular fonts used by developers today, and it solves the leak issues that is commonly done by developers.'
+                groupId groupId            // The groupId in `implementation`
+                name 'typer_roboto'        // The actual module name in your IDE
+                description = 'An easy to use Roboto font library'
                 url siteUrl
 
                 // Set your license
@@ -64,9 +61,9 @@ install {
 
                 developers {
                     developer {
-                        id 'elmargomezio'
-                        name 'Elmar Rhex Gomez'
-                        email 'mail@elmargomez.com'
+                        id 'rhexgomez'
+                        name 'Rhex Gomez'
+                        email 'rhexgomez@outlook.com'
                     }
                 }
 
@@ -74,48 +71,13 @@ install {
                     connection gitUrl
                     developerConnection gitUrl
                     url siteUrl
-
                 }
             }
         }
     }
 }
 
-if (project.hasProperty("kotlin")) { //Kotlin libraries
-    task sourcesJar(type: Jar) {
-        classifier = 'sources'
-        from android.sourceSets.main.java.srcDirs
-    }
-
-    task javadoc(type: Javadoc, dependsOn: dokka) {
-
-    }
-} else if (project.hasProperty("android")) {
-    task sourcesJar(type: Jar) {
-        classifier = 'sources'
-        from android.sourceSets.main.java.srcDirs
-    }
-
-    task javadoc(type: Javadoc) {
-        source = android.sourceSets.main.java.srcDirs
-        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    }
-} else { // Java libraries
-    task sourcesJar(type: Jar, dependsOn: classes) {
-        classifier = 'sources'
-        from sourceSets.main.allSource
-    }
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
+apply from: 'dokka-kotlin-javadoc.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -124,12 +86,12 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 bintray {
     user = properties.getProperty("bintray.user")
     key = properties.getProperty("bintray.apikey")
-
     configurations = ['archives']
+    publish = true // True -> Publish after uploading
+
     pkg {
-        repo = "maven"
-        // it is the name that appears in bintray when logged
-        name = "Typer"
+        repo = "Typer"                                      // This is the name found in Bintray {user}/{repo}/{package}
+        name = "com.rhexgomez.typer.roboto"                 // This is the package found in Bintray e.g {user}/{repo}/{package}
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
@@ -137,11 +99,11 @@ bintray {
         version {
             gpg {
                 sign = true //Determines whether to GPG sign the files. The default is false
-                passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
+                passphrase = properties.getProperty("bintray.gpg.password")
+                //Optional. The passphrase for GPG signing'
             }
         }
     }
-    override = true
 }
 
 repositories {

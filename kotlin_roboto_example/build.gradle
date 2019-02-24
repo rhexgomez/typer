@@ -5,8 +5,6 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 28
 
-
-
     defaultConfig {
         applicationId "com.rhexgomez.typer.roboto.example"
         minSdkVersion 16
@@ -15,7 +13,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -29,8 +26,9 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':typer_roboto')
+    implementation project(':typer-roboto')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.rhexgomez.typer:typer-roboto:2.0.0'
 }
