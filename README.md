@@ -81,7 +81,7 @@ Feel free to use the Issue tracker or message me in Twitter @rhexgomez
 ## License
 
 ```
-Copyright 2015 Elmar Rhex Gomez
+Copyright 2015 Rhex Gomez
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
